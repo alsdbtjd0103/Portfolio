@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
-import {BsSun,BsFillMoonFill} from 'react-icons/bs'
+import { BsSun, BsFillMoonFill } from 'react-icons/bs'
 
 export const Header: React.FC = () => {
     type Item = {
@@ -9,10 +9,11 @@ export const Header: React.FC = () => {
         icon?: string
     }
 
-    const [toggle,setToggle] = useState<boolean>(false);
+    const [toggle, setToggle] = useState<boolean>(false);
 
     const DarkMode = () => {
         setToggle((previous) => !previous)
+        console.log(toggle);
     }
 
     const navItemList: Item[] = [
@@ -41,19 +42,19 @@ export const Header: React.FC = () => {
                 <StyledLogo href=''>
                     Developer
                 </StyledLogo>
-                    <StyledItems>
+                <StyledItems>
                     {navItemList.map((item: Item, index: number) => {
                         return <StyledItem key={index}>{item.title}</StyledItem>
                     })}
-                    </StyledItems>
-                    <DarkModeContainer>
-                        <BsSun size={25} color={'#e7e100'}/>
-                        <DarkModeButtonContainer style={toggle ? {justifyContent:'flex-end'} : {justifyContent:'flex-start'}}>
-                            <DarkModeButton onClick={DarkMode}/>
-                        </DarkModeButtonContainer>
-                        <BsFillMoonFill size={25} color={'gray'}/>
-                    </DarkModeContainer>
-                
+                </StyledItems>
+                <DarkModeContainer>
+                    <BsSun size={25} color={'#e7e100'} />
+                    <DarkModeButtonContainer>
+                        <DarkModeButton onClick={DarkMode} toggle={toggle}/>
+                    </DarkModeButtonContainer>
+                    <BsFillMoonFill size={25} color={'gray'} />
+                </DarkModeContainer>
+
             </StyledNav>
         </StyledHeader>
     )
@@ -66,7 +67,6 @@ const StyledHeader = styled.header`
     left:0;
     z-index: var(--z-fixed);
     height:80px;
-    border-style: solid;
 
 
 `
@@ -86,28 +86,24 @@ const StyledNav = styled.nav`
     height:100%;
 `
 const DarkModeContainer = styled.div`
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3,1fr);
-    border-style: solid;
-    border-width: 1px;
+    display: flex;
     height:100%;
-    
+    align-items: center;
+    padding:0px 30px;
 `
 
 const DarkModeButtonContainer = styled.span`
-    display: flex;
-    justify-content: flex-start;
     background-color: gray;
     width:70px;
     height:30px;
     border-radius: 20px;
     padding:3px 5px;
-    transition-property: all;
-    transition-duration: 0.5s;
+    position: relative;
+    margin:0px 30px;
+    
 `
-const DarkModeButton = styled.button` 
-    position:fixed;
+const DarkModeButton = styled.button<{toggle:boolean}>` 
+    position:absolute;
     width:30px;
     height:30px;
     border-radius: 50%;
@@ -116,6 +112,12 @@ const DarkModeButton = styled.button`
         cursor:pointer
     }
     border-style: none;
+    right:${({toggle}) => toggle ? '45px' : '5px'};
+    
+    transition-property: right;
+    transition-duration: 0.7s;
+    
+    
 `
 
 const StyledItems = styled.ul`
