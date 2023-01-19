@@ -61,12 +61,15 @@ export const Header: React.FC = () => {
 }
 
 const StyledHeader = styled.header`
+    display: flex;
     width:100%;
     position:fixed;
     top:0;
     left:0;
     z-index: var(--z-fixed);
     height:80px;
+    background-color: white;
+    padding: 0px 100px;
 
 
 `
