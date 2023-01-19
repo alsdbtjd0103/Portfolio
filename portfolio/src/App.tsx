@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './style/style.css';
 import styled from 'styled-components';
 import { Header } from './components/Header';
@@ -6,18 +6,32 @@ import GlobalStyles from './style/GlobalStyle';
 import { PageContainer } from './components/PageContainer';
 import { Home } from './components/Home';
 
+
 function App() {
+
+
+
   return (
     <>
       <GlobalStyles />
-      <RootContainer>
+      <RootContainer >
         <Header></Header>
-        <PageContainer>
+        <PageContainer id="Home">
           <Home />
         </PageContainer>
-        <PageContainer>
+        <PageContainer id='About'>
           <Home />
         </PageContainer>
+        <PageContainer id='Skills'>
+          <Home />
+        </PageContainer>
+        <PageContainer id='Qualifications'>
+          <Home />
+        </PageContainer>
+        <PageContainer id='Projects'>
+          <Home />
+        </PageContainer>
+        
       </RootContainer>
     </>
   );
@@ -26,17 +40,14 @@ function App() {
 export default App;
 
 const RootContainer = styled.div`
-  position: fixed;
-  top:0;
-  left:0;
   width: 100vw;
   height: 100vh;
-  overflow: scroll;
   padding: 0 100px 0px 100px;
   background-color:white;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
+  
   
   
 `

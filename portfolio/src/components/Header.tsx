@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import { BsSun, BsFillMoonFill } from 'react-icons/bs'
+import { Link } from 'react-scroll';
+
 
 export const Header: React.FC = () => {
     type Item = {
@@ -15,25 +17,33 @@ export const Header: React.FC = () => {
         setToggle((previous) => !previous)
         console.log(toggle);
     }
+    
+
 
     const navItemList: Item[] = [
         {
-            title: 'Home'
+            title: 'Home',
+            href: 'Home'
         },
         {
-            title: 'About'
+            title: 'About',
+            href: 'About'
         },
         {
-            title: 'Skills'
+            title: 'Skills',
+            href: 'Skills',
         },
         {
-            title: 'Qualifications'
+            title: 'Qualifications',
+            href: 'Qualifications'
         },
         {
-            title: 'Projects'
+            title: 'Projects',
+            href: 'Projects',
         },
         {
-            title: 'Contact'
+            title: 'Contact',
+            href: 'Contact'
         }
     ]
     return (
@@ -44,13 +54,22 @@ export const Header: React.FC = () => {
                 </StyledLogo>
                 <StyledItems>
                     {navItemList.map((item: Item, index: number) => {
-                        return <StyledItem key={index}>{item.title}</StyledItem>
+
+                        return (
+
+                            <StyledItem key={index}>
+                                <Link to={`${item.href}`} spy={true} smooth={true} duration={500}>
+                                {item.title}
+                                </Link>
+                                </StyledItem>
+
+                        )
                     })}
                 </StyledItems>
                 <DarkModeContainer>
                     <BsSun size={25} color={'#e7e100'} />
                     <DarkModeButtonContainer>
-                        <DarkModeButton onClick={DarkMode} toggle={toggle}/>
+                        <DarkModeButton onClick={DarkMode} toggle={toggle} />
                     </DarkModeButtonContainer>
                     <BsFillMoonFill size={25} color={'gray'} />
                 </DarkModeContainer>
@@ -105,7 +124,7 @@ const DarkModeButtonContainer = styled.span`
     margin:0px 30px;
     
 `
-const DarkModeButton = styled.button<{toggle:boolean}>` 
+const DarkModeButton = styled.button<{ toggle: boolean }>` 
     position:absolute;
     width:30px;
     height:30px;
@@ -115,7 +134,7 @@ const DarkModeButton = styled.button<{toggle:boolean}>`
         cursor:pointer
     }
     border-style: none;
-    right:${({toggle}) => toggle ? '45px' : '5px'};
+    right:${({ toggle }) => toggle ? '45px' : '5px'};
     
     transition-property: right;
     transition-duration: 0.7s;

@@ -2,6 +2,8 @@ import styled from "styled-components"
 import React from "react"
 import { ProfileIconContainer } from "./ProfileIconContainer"
 import profileImage from '../Image/profile.jpeg';
+import { Link } from "react-scroll";
+
 
 
 export const Home = () => {
@@ -29,7 +31,9 @@ export const Home = () => {
                 }}>
                     언제나 더 나은 미래를 꿈꾸고 있는 개발자 지망생 호소인입니다!
                 </span>
+
                 <StyledButton>연락하기</StyledButton>
+  
             </Container>
             <ImageContainer src={profileImage}>
 

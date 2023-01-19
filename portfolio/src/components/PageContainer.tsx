@@ -2,14 +2,14 @@ import styled from "styled-components"
 import React from 'react';
 import '../style/style.css';
 interface Props{
+    id?:string,
     children?:React.ReactNode,
 }
 
 export const PageContainer = (props:Props) => {
-    const {children} = props;
-    console.log(window.innerHeight);
+    const {id,children} = props;
     return(
-        <RootContainer>
+        <RootContainer id={id}>
             {children}
         </RootContainer>
     )
