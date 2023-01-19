@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
         setToggle((previous) => !previous)
         console.log(toggle);
     }
-    
+
 
 
     const navItemList: Item[] = [
@@ -56,12 +56,11 @@ export const Header: React.FC = () => {
                     {navItemList.map((item: Item, index: number) => {
 
                         return (
-
-                            <StyledItem key={index}>
-                                <Link to={`${item.href}`} spy={true} smooth={true} duration={500}>
-                                {item.title}
-                                </Link>
+                            <Link to={`${item.href}`} key={index} spy={true} smooth={true} duration={500}>
+                                <StyledItem >
+                                    {item.title}
                                 </StyledItem>
+                            </Link>
 
                         )
                     })}
@@ -159,10 +158,13 @@ const StyledItem = styled.li`
         cursor:pointer;
         
     }
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     -webkit-transition-property: all; /* Safari */
     -webkit-transition-duration: 0.7s; /* Safari */
     transition-property: all;
     transition-duration: 0.7s;
-    padding: 10px 0px;
+    padding: 10px 3px;
 `
