@@ -7,6 +7,7 @@ interface Props{
 
 export const PageContainer = (props:Props) => {
     const {children} = props;
+    console.log(window.innerHeight);
     return(
         <RootContainer>
             {children}
@@ -17,7 +18,7 @@ export const PageContainer = (props:Props) => {
 const RootContainer = styled.div`
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;  //한 페이지 당 한 컴포넌트
     align-items: center;
     justify-content: center;
 `

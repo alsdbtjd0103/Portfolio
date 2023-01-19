@@ -62,12 +62,14 @@ const StyledButton = styled.button`
     width:100px;
     height:50px;
     font-size: 17px;
+    padding:5px 10px;
     :hover{
         opacity: 0.75;
         box-shadow: 2px 2px 2px gray;
 
     }
     cursor: pointer;
+    
 `
 
 const ImageContainer = styled.img`

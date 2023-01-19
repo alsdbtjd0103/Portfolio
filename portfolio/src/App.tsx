@@ -15,6 +15,9 @@ function App() {
         <PageContainer>
           <Home />
         </PageContainer>
+        <PageContainer>
+          <Home />
+        </PageContainer>
       </RootContainer>
     </>
   );
@@ -27,12 +30,13 @@ const RootContainer = styled.div`
   top:0;
   left:0;
   width: 100vw;
-  height:100vh;
-  padding: 0 100px 0px 100px;
+  height: 100vh;
   overflow: scroll;
+  padding: 0 100px 0px 100px;
   background-color:white;
   display: flex;
   box-sizing: border-box;
+  flex-direction: column;
   
   
 `
