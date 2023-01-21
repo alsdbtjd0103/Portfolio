@@ -14,26 +14,26 @@ export const Home = () => {
             </IconsContainer>
             <Container>
                 <span style={{
-                    fontSize:'30px',
-                    marginBottom:'30px',
+                    fontSize: '30px',
+                    marginBottom: '30px',
                 }}>민유성</span>
                 <div style={{
-                    borderStyle:'solid',
-                    borderWidth:'0.001px',
-                    borderColor:'#d0d0d0',
-                    width:'100%',
-                    marginBottom:'20px'
+                    borderStyle: 'solid',
+                    borderWidth: '0.001px',
+                    borderColor: '#d0d0d0',
+                    width: '100%',
+                    marginBottom: '20px'
                 }}></div>
                 <span style={{
-                    fontSize:'15px',
-                    color:'gray',
-                    marginBottom:'200px'
+                    fontSize: '15px',
+                    color: 'gray',
+                    marginBottom: '200px'
                 }}>
                     언제나 더 나은 미래를 꿈꾸고 있는 개발자 지망생 호소인입니다!
                 </span>
 
                 <StyledButton>연락하기</StyledButton>
-  
+
             </Container>
             <ImageContainer src={profileImage}>
 
@@ -43,7 +43,7 @@ export const Home = () => {
 }
 
 const IconsContainer = styled.div`
-    width: 10%;
+    width: 5%;
     height:100%;
 `
 

@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import GlobalStyles from './style/GlobalStyle';
 import { PageContainer } from './components/PageContainer';
 import { Home } from './components/Home';
+import { About } from './components/About';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <Home />
         </PageContainer>
         <PageContainer id='About'>
-          <Home />
+          <About />
         </PageContainer>
         <PageContainer id='Skills'>
           <Home />
@@ -29,6 +30,9 @@ function App() {
           <Home />
         </PageContainer>
         <PageContainer id='Projects'>
+          <Home />
+        </PageContainer>
+        <PageContainer id='Contacts'>
           <Home />
         </PageContainer>
         
