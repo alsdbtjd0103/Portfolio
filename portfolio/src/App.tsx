@@ -6,6 +6,7 @@ import GlobalStyles from './style/GlobalStyle';
 import { PageContainer } from './components/PageContainer';
 import { Home } from './components/Home';
 import { About } from './components/About';
+import { Skills } from './components/Skills';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <About />
         </PageContainer>
         <PageContainer id='Skills'>
-          <Home />
+          <Skills />
         </PageContainer>
         <PageContainer id='Qualifications'>
           <Home />

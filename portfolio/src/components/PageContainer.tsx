@@ -13,7 +13,7 @@ export const PageContainer = (props: Props) => {
     const { id, children, title, subtitle, style } = props;
     return (
         <RootContainer id={id} style={style}>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center',marginTop:'30px' }}>
                 <StyledTitle>{title}</StyledTitle>
                 <StyledSubTitle>{subtitle}</StyledSubTitle>
             </div>
@@ -30,11 +30,11 @@ const RootContainer = styled.div`
     justify-content: center;
 `
 const StyledTitle = styled.div`
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 `
 const StyledSubTitle = styled.div`
-    font-size: 20px;
+    font-size: 15px;
     color: gray;
 `
