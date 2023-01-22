@@ -7,15 +7,18 @@ interface Props {
     title?: string,
     subtitle?: string,
     style?: any,
+    titleStyle?:any,
 }
 
 export const PageContainer = (props: Props) => {
-    const { id, children, title, subtitle, style } = props;
+    const { id, children, title, subtitle, style,titleStyle} = props;
     return (
         <RootContainer id={id} style={style}>
-            <div style={{ textAlign: 'center',marginTop:'30px' }}>
+            <div style={{ textAlign: 'center',marginTop:'30px',marginBottom:'100px' }}>
+                <div style={titleStyle}>
                 <StyledTitle>{title}</StyledTitle>
                 <StyledSubTitle>{subtitle}</StyledSubTitle>
+                </div>
             </div>
             {children}
         </RootContainer>

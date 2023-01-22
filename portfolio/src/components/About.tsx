@@ -26,7 +26,6 @@ export const About = () => {
                 width:'100%',
                 height:'100%',
                 justifyContent:'space-between',
-                marginTop:'100px'
             }}>
             <ImageContainer src={exampleImage} />
 

@@ -58,7 +58,7 @@ export const Skills = () => {
                 display:'flex',
                 width:'80%',
                 justifyContent:'space-evenly',
-                marginTop:'100px'
+                
             }}>
             <StackBox title="Frontend" stacks = {FrontStacks}/>
             <StackBox title="Backend" stacks = {BackStacks}/>

@@ -7,6 +7,7 @@ import { PageContainer } from './components/PageContainer';
 import { Home } from './components/Home';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
+import { Projects } from './components/Projects';
 
 
 function App() {
@@ -28,13 +29,13 @@ function App() {
           <Skills />
         </PageContainer>
         <PageContainer id='Qualifications'>
-          <Home />
+          
         </PageContainer>
         <PageContainer id='Projects'>
-          <Home />
+          <Projects />
         </PageContainer>
-        <PageContainer id='Contacts'>
-          <Home />
+        <PageContainer id='Contact'>
+          
         </PageContainer>
         
       </RootContainer>
