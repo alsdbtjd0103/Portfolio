@@ -8,6 +8,7 @@ import { Home } from './components/Home';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
+import { AnimatePresence } from 'framer-motion';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
   return (
     <>
       <GlobalStyles />
+      <AnimatePresence onExitComplete={() => {
+                    console.log('asd')
+                    return true}}>
       <RootContainer >
         <Header></Header>
         <PageContainer id="Home">
@@ -39,6 +43,7 @@ function App() {
         </PageContainer>
         
       </RootContainer>
+      </AnimatePresence>
     </>
   );
 }

@@ -29,7 +29,7 @@ export const Home = () => {
                     color: 'gray',
                     marginBottom: '200px'
                 }}>
-                    언제나 더 나은 미래를 꿈꾸고 있는 개발자 지망생 호소인입니다!
+                    언제나 더 나은 미래를 꿈꾸고 있는 개발자입니다!
                 </span>
 
                 <StyledButton>연락하기</StyledButton>
