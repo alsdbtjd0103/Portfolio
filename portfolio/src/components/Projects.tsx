@@ -88,8 +88,8 @@ const Template = (props: TemplateProps) => {
                     <LinkContainer href={github} target={'_blank'}>
                     <AiFillGithub size={25}/>
                     </LinkContainer>
-                    <LinkContainer style={{marginLeft:'20px'}}>
-                    <BiLinkExternal size={25} href={link} target={'_blank'}/>
+                    <LinkContainer style={{marginLeft:'20px'}} href={link} target={'_blank'}>
+                    <BiLinkExternal size={25} />
                     </LinkContainer>
                     </div>
 
