@@ -16,21 +16,22 @@ type Item = {
 const StackBox = (props:Title) => {
     const {title,stacks} = props;
     const size=25;
+    const StyledCom = styled.div`
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns:1fr 1fr;
+        place-items: center;
+    `
     return(
         <StyledBox>
             <StyledTitle>{title}</StyledTitle>
-            <div style={{
-                display:'flex',
-                flexWrap:'wrap',
-                alignItems:'center',
-                justifyContent:'space-around',
-                height:'100%',
-            }}>
 
+            <StyledCom>
             {stacks.map((stack,index) => {
                 return <Items key={index} name={stack} icon = {<BsCheck2Circle size={size} />} />
             })}
-            </div>
+            </StyledCom>
 
         </StyledBox>
     )

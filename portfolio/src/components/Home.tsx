@@ -31,8 +31,9 @@ export const Home = () => {
                 }}>
                     언제나 더 나은 미래를 꿈꾸고 있는 개발자입니다!
                 </span>
-
+                <Link to={'Contact'}  spy={true} smooth={true} duration={500}>
                 <StyledButton>연락하기</StyledButton>
+                </Link>
 
             </Container>
             <ImageContainer src={profileImage}>
