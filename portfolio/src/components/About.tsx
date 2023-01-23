@@ -42,7 +42,7 @@ export const About = () => {
                 <AboutBoxComponent title='University' subtext='고려대학교 컴퓨터학과'/>
             </ItemContainer>
             <TextContainer>
-                I am a full-stack software engineer that is curious and competent. I see myself as a life-long learner, that is driven to solve complex problems, programming is my choice of medium to stimulate my mind.
+                저는 Frontend software engineer로 호기심이 많고 무언가를 만들어낼 때 흥미를 느낍니다. 프론트만 담당하는 것이 아니라 백엔드 또한 공부하면서 풀스택 개발자가 되기 위해 노력하고 있습니다. 특히 창업에 대한 꿈이 있어 스타트업에 관심을 많이 가지고 있습니다.
             </TextContainer>
             </div>
             </div>
@@ -86,7 +86,7 @@ const ImageContainer = styled.img`
 `
 
 const TextContainer = styled.div`
-    width:50%;
+    width:60%;
     padding: 10px 20px;
     color: gray;
     line-height: 30px;
