@@ -5,13 +5,13 @@ import {AiFillGithub,AiOutlineMail,AiOutlinePhone} from 'react-icons/ai';
 export const ProfileIconContainer = () => {
     return(
         <Container>
-            <Item>
+            <Item href='https://github.com/alsdbtjd0103' target={'_blank'}>
             <AiFillGithub size={25}/>
             </Item>
-            <Item>
+            <Item href='https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=alsdbtjd0103@korea.ac.kr' target='_blank'>
                 <AiOutlineMail size={25}/>
             </Item>
-            <Item>
+            <Item title='010-8983-4927'>
                 <AiOutlinePhone size={25}/>
             </Item>
 
@@ -29,7 +29,7 @@ const Container = styled.div`
     height:100%;
 `
 
-const Item = styled.div`
+const Item = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
