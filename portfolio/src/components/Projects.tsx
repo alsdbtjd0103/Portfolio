@@ -6,7 +6,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import NowmeetImage from '../Image/nowmeet.png';
 import PonyoImage from '../Image/Ponyo.png';
 import TrashImage from '../Image/trash.jpeg';
-import { AiOutlinePaperClip } from 'react-icons/ai';
+import { AiOutlinePaperClip,AiFillGithub } from 'react-icons/ai';
+import {BiLinkExternal} from 'react-icons/bi'
+
 import { wrap } from "popmotion";
 import PortfolioImage from '../Image/portfolio.png';
 
@@ -15,8 +17,10 @@ interface TemplateProps {
     explain: string,
     imgSrc: any,
     funcs: string[],
-    link: string,
+    link?: string,
+    github:string,
     stacks: string[],
+    price?:string[],
 }
 
 const NowMeet: TemplateProps = {
@@ -25,6 +29,7 @@ const NowMeet: TemplateProps = {
     imgSrc: NowmeetImage,
     funcs: ['카카오맵 API를 이용한 중간 지점 거리순 TOP 5 제공', '카카오톡 API를 이용하여 친구에게 공유하기', '각 장소별로 거리 제공'],
     link: 'https://www.nowmeet.xyz',
+    github:'https://github.com/alsdbtjd0103/Middle',
     stacks: ['ReactJs', 'AWS Amplify', 'Javascript', 'HTML', 'CSS']
 }
 const Ponyo: TemplateProps = {
@@ -33,7 +38,9 @@ const Ponyo: TemplateProps = {
     imgSrc: PonyoImage,
     funcs: ['Object Detection을 통한 간편한 식단 등록', '각 영양분 섭취량과 등록한 혈당량들을 체크하는 월별 리포트 제공', '간단한 당뇨병 예측 알고리즘 제공'],
     link: 'www.github.com',
-    stacks: ['React Native', 'Javascript', 'NodeJS', 'Flask', 'YOLOv3', 'Firebase', 'Faster-Rcnn']
+    github:'https://github.com/alsdbtjd0103/Ponyo',
+    stacks: ['React Native', 'Javascript', 'NodeJS', 'Flask', 'YOLOv3', 'Firebase', 'Faster-Rcnn'],
+    price:['고려대학교 캡스톤 디자인 경진대회 최우수상']
 }
 
 const TrashClassification: TemplateProps = {
@@ -42,6 +49,7 @@ const TrashClassification: TemplateProps = {
     imgSrc: TrashImage,
     funcs: ['YOLOv5 모델을 이용하여 구축한 Object Detection', '쓰레기 촬영 시, 물질 분석', 'React Native Expo를 이용하여 실제 카메라로 테스트 가능'],
     link: '',
+    github:'https://github.com/alsdbtjd0103/COSE474_Final_Project',
     stacks: ['React Native', 'Javascript', 'YOLOv5', 'Flask']
 }
 
@@ -51,11 +59,12 @@ const MyPortfolio: TemplateProps={
     imgSrc:PortfolioImage,
     funcs:['다크 모드 기능','상단 네비게이셔 바 클릭 시, 해당 영역으로 이동'],
     link:'/',
+    github:'https://github.com/alsdbtjd0103/Portfolio',
     stacks:['ReactJS','Typescript','Github Hosting']
 }
 
 const Template = (props: TemplateProps) => {
-    const { title, explain, imgSrc, funcs, link, stacks } = props;
+    const { title, explain, imgSrc, funcs, link, stacks,github,price } = props;
     return (
         <>
             <ImageContainer src={imgSrc} alt={title} />
@@ -69,9 +78,20 @@ const Template = (props: TemplateProps) => {
                     <FunctionContainer>
                         <FunctionText style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '20px' }}>Func.</FunctionText>
                         {funcs.map((func, index) => <FunctionText key={index}>{func}</FunctionText>)}
+                        {price?.map((p,index) => {
+                            return <FunctionText key={index} style={{fontSize:'12px',marginTop:'10px'}}>{'P.S '+p}</FunctionText>
+                        })}
                     </FunctionContainer>
+
+                    <div style={{display:'flex',marginTop:'10px'}}>
                 
-                <LinkContainer href={link} target={'_blank'}>{'Let\'s Go'}</LinkContainer>
+                    <LinkContainer href={link} target={'_blank'}>
+                    <AiFillGithub size={25}/>
+                    </LinkContainer>
+                    <LinkContainer style={{marginLeft:'20px'}}>
+                    <BiLinkExternal size={25} href={github} target={'_blank'}/>
+                    </LinkContainer>
+                    </div>
 
 
 
@@ -233,7 +253,7 @@ const FunctionContainer = styled.div`
     font-size: 15px;
     flex-direction: column;
     margin-bottom: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
 `
 const FunctionText = styled.div`
     font-size: 13px;
@@ -252,15 +272,7 @@ const StackText = styled.div`
 `
 const LinkContainer = styled.a`
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #e6e6e6;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     
 `

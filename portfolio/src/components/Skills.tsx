@@ -50,7 +50,7 @@ const Items = (props:Item) => {
 
 }
 export const Skills = () => {
-    const FrontStacks = ['HTML','Javascript','React','Typescript'];
+    const FrontStacks = ['React Native','Javascript','ReactJS','Typescript'];
     const BackStacks = ['NodeJS','Flask','Firebase','MySQL']
     return(
         <PageContainer title='Skills' subtitle="My Stacks" style={{flexDirection:'column'}}>
