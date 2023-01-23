@@ -37,7 +37,7 @@ const Ponyo: TemplateProps = {
     explain: '당뇨병 환자들을 위한 식단 관리 서비스',
     imgSrc: PonyoImage,
     funcs: ['Object Detection을 통한 간편한 식단 등록', '각 영양분 섭취량과 등록한 혈당량들을 체크하는 월별 리포트 제공', '간단한 당뇨병 예측 알고리즘 제공'],
-    link: 'www.github.com',
+    link: 'https://www.youtube.com/watch?v=-1PO2r9460s',
     github:'https://github.com/alsdbtjd0103/Ponyo',
     stacks: ['React Native', 'Javascript', 'NodeJS', 'Flask', 'YOLOv3', 'Firebase', 'Faster-Rcnn'],
     price:['고려대학교 캡스톤 디자인 경진대회 최우수상']
@@ -48,7 +48,7 @@ const TrashClassification: TemplateProps = {
     explain: '분리수거를 위한 쓰레기 종류 분류',
     imgSrc: TrashImage,
     funcs: ['YOLOv5 모델을 이용하여 구축한 Object Detection', '쓰레기 촬영 시, 물질 분석', 'React Native Expo를 이용하여 실제 카메라로 테스트 가능'],
-    link: '',
+    link: 'https://github.com/alsdbtjd0103/COSE474_Final_Project/blob/main/Final_Project/icml2019_style_COSE474__1_%20(2).pdf',
     github:'https://github.com/alsdbtjd0103/COSE474_Final_Project',
     stacks: ['React Native', 'Javascript', 'YOLOv5', 'Flask']
 }
@@ -85,11 +85,11 @@ const Template = (props: TemplateProps) => {
 
                     <div style={{display:'flex',marginTop:'10px'}}>
                 
-                    <LinkContainer href={link} target={'_blank'}>
+                    <LinkContainer href={github} target={'_blank'}>
                     <AiFillGithub size={25}/>
                     </LinkContainer>
                     <LinkContainer style={{marginLeft:'20px'}}>
-                    <BiLinkExternal size={25} href={github} target={'_blank'}/>
+                    <BiLinkExternal size={25} href={link} target={'_blank'}/>
                     </LinkContainer>
                     </div>
 
