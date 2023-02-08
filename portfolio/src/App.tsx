@@ -10,6 +10,7 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { AnimatePresence } from 'framer-motion';
 import { Contact } from './components/Contact';
+import Qualifications from './components/Qualifications';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
 
           <Skills />
           <PageContainer id='Qualifications'>
-
+            <Qualifications />
           </PageContainer>
           <Projects />
           <Contact />

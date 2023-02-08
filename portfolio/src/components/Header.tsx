@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
         icon?: string
     }
 
-    const [toggle, setToggle] = useState<boolean>(false);
+    const [toggle, setToggle] = useState<boolean>(true);
 
     const DarkMode = () => {
         setToggle((previous) => !previous)

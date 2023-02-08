@@ -89,7 +89,7 @@ const ImageContainer = styled.img`
 `
 
 const TextContainer = styled.div`
-    width:60%;
+    width:80%;
     padding: 10px 20px;
     color: gray;
     line-height: 30px;
