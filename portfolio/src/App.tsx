@@ -9,6 +9,7 @@ import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { AnimatePresence } from 'framer-motion';
+import { Contact } from './components/Contact';
 
 
 function App() {
@@ -19,30 +20,25 @@ function App() {
     <>
       <GlobalStyles />
       <AnimatePresence onExitComplete={() => {
-                    console.log('asd')
-                    return true}}>
-      <RootContainer >
-        <Header></Header>
-        <PageContainer id="Home">
-          <Home />
-        </PageContainer>
-        <PageContainer id='About'>
+        console.log('asd')
+        return true
+      }}>
+        <RootContainer >
+          <Header></Header>
+          <PageContainer id="Home">
+            <Home />
+          </PageContainer>
+
           <About />
-        </PageContainer>
-        <PageContainer id='Skills'>
+
           <Skills />
-        </PageContainer>
-        <PageContainer id='Qualifications'>
-          
-        </PageContainer>
-        <PageContainer id='Projects'>
+          <PageContainer id='Qualifications'>
+
+          </PageContainer>
           <Projects />
-        </PageContainer>
-        <PageContainer id='Contact'>
-          
-        </PageContainer>
-        
-      </RootContainer>
+          <Contact />
+
+        </RootContainer>
       </AnimatePresence>
     </>
   );

@@ -20,31 +20,34 @@ const AboutBoxComponent = (props: BoxProps) => {
 
 export const About = () => {
     return (
-        <PageContainer style={{ flexDirection: 'column' }} title={'About'} subtitle={'My Introduction'}>
+        <PageContainer style={{ flexDirection: 'column' }} title={'About'} subtitle={'My Introduction'} id='About'>
             <div style={{
-                display:'flex',
-                width:'100%',
-                height:'100%',
-                justifyContent:'space-between',
+                display: 'flex',
+                width: '100%',
+                height: '50%',
             }}>
-            <ImageContainer src={exampleImage} />
+                <ImageContainer src={exampleImage} />
 
-            <div style={{
-                display:'flex',
-                justifyContent:'center', 
-                alignItems:'flex-start',
-                flexDirection:'column',
-                paddingLeft:'100px'
-            }}>
-            <ItemContainer>
-                <AboutBoxComponent title='Birthday' subtext="2000-01-03" />
-                <AboutBoxComponent title='Air Force' subtext="~2022-07-15"/>
-                <AboutBoxComponent title='University' subtext='고려대학교 컴퓨터학과'/>
-            </ItemContainer>
-            <TextContainer>
-                저는 Frontend software engineer로 호기심이 많고 무언가를 만들어낼 때 흥미를 느낍니다. 프론트만 담당하는 것이 아니라 백엔드 또한 공부하면서 풀스택 개발자가 되기 위해 노력하고 있습니다. 특히 창업에 대한 꿈이 있어 스타트업에 관심을 많이 가지고 있습니다.
-            </TextContainer>
-            </div>
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    paddingLeft: '100px'
+                }}>
+                    <ItemContainer>
+                        <AboutBoxComponent title='Birthday' subtext="2000-01-03" />
+                        <AboutBoxComponent title='Air Force' subtext="~2022-07-15" />
+                        <AboutBoxComponent title='University' subtext='고려대학교 컴퓨터학과' />
+                    </ItemContainer>
+                    <TextContainer>
+                        안녕하세요 항상 더 나은 미래를 꿈꾸는 개발자 민유성입니다.
+                        저는 웹 프론트를 주로 공부했지만 백엔드에도 관심을 가지고 여러 분야를 공부하고 있습니다.
+                        비록 아직 실무 경험도 없고 부족하지만 개인 프로젝트들을 꾸준히 진행하면서 실력을 향상시키기 위해 노력하고 있습니다.
+                        새로운 것을 시도하는 것에 두려움을 느끼기보다는 오히려 설렘을 느끼며 한번 맡은 일은 완벽하진 않더라도 어떻게든 해내려고 노력합니다.
+                        감사합니다!
+                    </TextContainer>
+                </div>
             </div>
         </PageContainer>
     )

@@ -148,7 +148,7 @@ export const Projects = () => {
 
     return (
 
-        <PageContainer title="Projects" subtitle="My Projects" style={{ flexDirection: 'column' }} titleStyle={{}}>
+        <PageContainer title="Projects" subtitle="My Projects" style={{ flexDirection: 'column' }} id='Projects'>
             <div style={{ display: 'flex' }}>
                 <PrevButton style={{ left: '0px' }} onClick={prevPlease} dataIndex={dataIndex}>{'<'}</PrevButton>
 
