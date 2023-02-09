@@ -105,6 +105,7 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     height:100%;
+    width: 90%;
 `
 const DarkModeContainer = styled.div`
     display: flex;
