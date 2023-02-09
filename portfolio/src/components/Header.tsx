@@ -33,10 +33,10 @@ export const Header: React.FC = () => {
             title: 'Skills',
             href: 'Skills',
         },
-        {
-            title: 'Qualifications',
-            href: 'Qualifications'
-        },
+        // {
+        //     title: 'Qualifications',
+        //     href: 'Qualifications'
+        // },
         {
             title: 'Projects',
             href: 'Projects',

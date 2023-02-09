@@ -33,9 +33,9 @@ function App() {
           <About />
 
           <Skills />
-          <PageContainer id='Qualifications'>
+          {/* <PageContainer id='Qualifications'>
             <Qualifications />
-          </PageContainer>
+          </PageContainer> */}
           <Projects />
           <Contact />
 
